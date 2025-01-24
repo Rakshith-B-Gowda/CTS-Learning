@@ -65,8 +65,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public ResponseEntity<List<Employee>> getAllEmployeeBetweenSalaries(int initialSalary, int finalSalary) {
-		return employeeRepository.getAllEmployeeBetweenSalaries(initialSalary,finalSalary);
+		List<Employee> employees = employeeRepository.findByEmployeeSalaryBetween(initialSalary,finalSalary);
+		return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
 	}
+
+	@Override
+	public ResponseEntity<List<Employee>> getAllByDesignation(String employeeDesignation) {
+		List<Employee> emplopyees = employeeRepository.getAllEmployeeByEmployeeDesignation(employeeDesignation);
+		return new ResponseEntity<List<Employee>>(emplopyees, HttpStatus.OK);
+	}
+
 
 	
 }

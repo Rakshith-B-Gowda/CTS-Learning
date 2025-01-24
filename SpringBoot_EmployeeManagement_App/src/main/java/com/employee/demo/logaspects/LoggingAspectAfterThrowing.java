@@ -16,3 +16,5 @@
  * "ex") public void logAfterThrowingAllMethods(Exception ex) throws Throwable {
  * LOGGER.debug("****LoggingAspect.logAfterThrowingAllMethods() " + ex); } }
  */
+package com.employee.demo.logaspects;
+

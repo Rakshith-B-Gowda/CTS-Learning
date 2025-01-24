@@ -20,5 +20,8 @@ public interface EmployeeService {
 	ResponseEntity<Employee> getEmployeeById(Integer employeeId) throws EmployeeNotFound;
 
 	ResponseEntity<List<Employee>> getAllEmployeeBetweenSalaries(int initialSalary, int finalSalary);
+	
+	ResponseEntity<List<Employee>> getAllByDesignation(String employeeDesignation);
+
 
 }

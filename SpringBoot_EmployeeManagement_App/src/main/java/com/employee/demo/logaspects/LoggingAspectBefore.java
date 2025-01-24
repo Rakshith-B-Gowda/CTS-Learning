@@ -1,4 +1,4 @@
-package com.example.demo.logaspects;
+package com.employee.demo.logaspects;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -13,17 +13,17 @@ public class LoggingAspectBefore {
 
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
-    @Before("execution(* com.example.demo.service.EmployeeService.*(..))")
+    @Before("execution(* com.employee.demo.service.EmployeeService.*(..))")
     public void logBeforeAllMethods(JoinPoint joinPoint) {
         LOGGER.info("****LoggingAspect.logBeforeAllMethods() : " + joinPoint.getSignature().getName());
     }
 
-    @Before("execution(* com.example.demo.service.EmployeeService.getEmployeeById(..))")
+    @Before("execution(* com.employee.demo.service.EmployeeService.getEmployeeById(..))")
     public void logBeforeGetEmployee(JoinPoint joinPoint) {
         LOGGER.info("****LoggingAspect.logBeforeGetEmployee() : " + joinPoint.getSignature().getName());
     }
 
-    @Before("execution(* com.example.demo.service.EmployeeService.addEmployee(..))")
+    @Before("execution(* com.employee.demo.service.EmployeeService.addEmployee(..))")
     public void logBeforeAddEmployee(JoinPoint joinPoint) {
         LOGGER.info("****LoggingAspect.logBeforeaddEmployee() : " + joinPoint.getSignature().getName());
     }

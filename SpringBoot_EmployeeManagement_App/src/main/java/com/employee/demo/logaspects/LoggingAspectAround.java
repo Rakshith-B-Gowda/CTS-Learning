@@ -35,3 +35,5 @@
  * LOGGER.debug("****LoggingAspect.logAroundAddEmployee() : " +
  * joinPoint.getSignature().getName() + ": After Method Execution"); } }
  */
+package com.employee.demo.logaspects;
+
